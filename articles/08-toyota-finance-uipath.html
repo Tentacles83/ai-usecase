@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="トヨタファイナンスがUiPathのAIエージェントとRPAを組み合わせ、問い合わせ対応時間を1件13分から4分に約70%削減した事例。AIエージェントとRPAの「組み合わせ」戦略を解説。"
+    />
+    <title>トヨタファイナンス、問い合わせ対応を13分→4分に | AI活用事例</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="../index.html" class="site-logo">
+          <div class="site-logo-icon">⚡</div>
+          <div>
+            <span class="site-logo-name">AI活用事例</span>
+            <span class="site-logo-sub">実績・数値で見る最前線</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="../index.html" class="nav-link">記事一覧</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="article-header">
+        <span class="tag">金融・カスタマーサービス</span>
+        <h1 class="article-title">
+          トヨタファイナンス、問い合わせ対応をAI+RPAで13分から4分に——UiPathで業務フローを再設計
+        </h1>
+        <div class="article-meta">
+          <span class="article-company"
+            >トヨタファイナンス株式会社 × UiPath</span
+          >
+          <span class="article-meta-sep">|</span>
+          <span>2026年6月</span>
+          <span class="article-meta-sep">|</span>
+          <span class="js-reading-time">読込中...</span>
+        </div>
+      </div>
+
+      <div class="article-container">
+        <p class="article-lead">
+          1988年にトヨタ自動車から独立したトヨタファイナンス株式会社は、UiPathが提供するAIエージェントとRPA（ロボティックプロセスオートメーション）を組み合わせることで、顧客からの問い合わせメール対応業務を大幅に効率化した。1件あたり平均13分かかっていた作業時間を平均4分に短縮し、約70%の削減を実現している。
+        </p>
+
+        <div class="article-body">
+          <h2>背景：増加する問い合わせと定型作業の負担</h2>
+          <p>
+            トヨタファイナンスは、自動車ローン・クレジットカード・スマートフォン決済・旅行・EC（電子商取引）などの多様な金融サービスを展開しており、顧客からの問い合わせは多岐にわたる。中でも問い合わせメールへの対応は、件数が多く、しかも定型的なシステム操作（会員情報の照会・契約情報の確認・バックエンドシステムへの入力など）が繰り返し発生する業務だった。
+          </p>
+          <p>
+            担当者は問い合わせ内容を読み取り、複数のシステムを操作して情報を集め、回答を作成するという一連の流れを毎回手動で行っており、1件あたり平均13分を要していた。件数が増えるほど担当者の負担が増す構造的な問題を抱えていた。
+          </p>
+
+          <h2>「AIエージェントのみ」でも「RPAのみ」でもない理由</h2>
+          <p>
+            トヨタファイナンスが選んだのは、AIエージェントとRPAの「組み合わせ」という独自の戦略だ。なぜどちらか一方ではなく、両者を併用したのか。
+          </p>
+          <p>
+            RPAは定型的・構造化された手順の自動化に優れているが、非定型な内容の理解や柔軟な判断は苦手だ。一方、AIエージェントは自然言語の理解と判断が得意だが、既存のシステムへの細かな操作制御はRPAの方が安定している場面もある。両者の強みを組み合わせることで、それぞれの弱点を補完し合う形を実現した。
+          </p>
+          <p>
+            具体的には、UiPath Studio Agent
+            Builderを活用し、以下のような役割分担を設計した。
+          </p>
+          <ul>
+            <li>
+              AIエージェント：問い合わせメールの内容を読み取り、意図・カテゴリを判定し、必要なアクションを決定
+            </li>
+            <li>
+              RPAロボット：AIの判断に基づき、社内の各種システムへの照会・入力・データ取得を実行
+            </li>
+            <li>
+              AIエージェント：取得したデータを統合し、回答文の下書きを生成
+            </li>
+            <li>
+              担当者：AIが作成した下書きを確認・修正し、送信（人間による最終確認を維持）
+            </li>
+          </ul>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-card-num">13分</div>
+              <div class="stat-card-label">
+                導入前の1件あたり<br />平均処理時間
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-num">4分</div>
+              <div class="stat-card-label">
+                導入後の1件あたり<br />平均処理時間
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-num">約70%削減</div>
+              <div class="stat-card-label">処理時間の<br />削減率</div>
+            </div>
+          </div>
+
+          <h2>成果と示唆：「代替」から「協働」へのシフト</h2>
+          <p>
+            AIエージェントとRPAの組み合わせにより、1件あたりの対応時間は13分から4分へと約70%短縮された。この改善は担当者の1日の業務量を大幅に軽減し、より複雑・高度な問い合わせへの対応や、サービス品質の向上に充てる時間を生み出している。
+          </p>
+          <p>
+            重要なのは、最終確認を人間が行う設計を維持している点だ。全てをAIに任せるのではなく、AIが下準備した作業を人間が確認・承認するという「ヒューマン・イン・ザ・ループ」のアプローチは、金融サービスのコンプライアンス要件を満たしつつ、最大限の効率化を実現するための合理的な選択だ。
+          </p>
+
+          <div class="chart-section">
+            <p class="chart-section-title">トヨタファイナンス 問い合わせ対応時間：導入前後</p>
+            <div class="bar-chart">
+              <div class="bar-chart-row">
+                <span class="bar-chart-label">導入前（1件）</span>
+                <div class="bar-chart-track">
+                  <div class="bar-chart-fill bar-chart-fill--muted" style="width:100%"></div>
+                </div>
+                <span class="bar-chart-value">13分</span>
+              </div>
+              <div class="bar-chart-row">
+                <span class="bar-chart-label">導入後（1件）</span>
+                <div class="bar-chart-track">
+                  <div class="bar-chart-fill bar-chart-fill--green" style="width:30.8%"></div>
+                </div>
+                <span class="bar-chart-value">4分</span>
+              </div>
+              <div class="bar-chart-row">
+                <span class="bar-chart-label">処理時間削減率</span>
+                <div class="bar-chart-track">
+                  <div class="bar-chart-fill" style="width:70%"></div>
+                </div>
+                <span class="bar-chart-value">約70%削減</span>
+              </div>
+            </div>
+            <p class="chart-note">出典: ＠IT（2026年6月）/ UiPathプレスリリース</p>
+          </div>
+
+          <div class="key-box">という現実的なアプローチへの転換が、スムーズな導入と大きな成果につながった。既存のシステム資産（RPAロボット）を活かしながらAIを加えることで、移行コストを抑えながら効果を最大化できる点は、多くの企業にとって参考になる。
+            </p>
+          </div>
+        </div>
+
+        <div class="article-references">
+          <h3>参考・出典</h3>
+          <ul class="ref-list">
+            <li>
+              ＠IT「トヨタ系金融会社はなぜ『AIエージェントだけ』でも『RPAだけ』でもなく"併用"にしたのか
+              トヨタファイナンスが実践、問い合わせ対応を13分→4分に」（2026年6月23日）<br />
+              <a
+                href="https://atmarkit.itmedia.co.jp/ait/articles/2606/23/news055.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://atmarkit.itmedia.co.jp/ait/articles/2606/23/news055.html</a
+              >
+            </li>
+            <li>
+              UiPath プレスリリース「Toyota Finance Improves Productivity in
+              Customer Service Operations by Implementing Agent Builder in
+              UiPath Studio」<br />
+              <a
+                href="https://www.uipath.com/ja/newsroom/toyota-finance-improves-productivity-in-customer-service-operations-by-implementing-agent-builder-in-uipath-studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://www.uipath.com/ja/newsroom/toyota-finance-improves-productivity-in-customer-service-operations-by-implementing-agent-builder-in-uipath-studio</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="article-nav">
+        <a href="../index.html" class="btn-back">← 記事一覧へ戻る</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-logo">AI活用事例</p>
+        <p class="footer-desc">
+          企業・団体における最新のAI活用事例を、具体的な数値とともに紹介します。
+        </p>
+        <p class="footer-copy">
+          掲載情報は各記事の公開日時点のものです。© 2026 AI活用事例
+        </p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

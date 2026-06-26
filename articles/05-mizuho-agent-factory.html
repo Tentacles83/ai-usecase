@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Amazonが社内Javaアプリ3万本のJava 17メダをAmazon Q Developerで自動化。4,500人年分の開発作業を削減。AI開発ツール活用の最大規模な社内導入事例。"
+    />
+    <title>Amazon、Q DeveloperでJavaアプリ3万本を移行——4,500人年分の作業を削減 | AI活用事例</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="../index.html" class="site-logo">
+          <div class="site-logo-icon">⚡</div>
+          <div>
+            <span class="site-logo-name">AI活用事例</span>
+            <span class="site-logo-sub">実績・数値で見る最前線</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="../index.html" class="nav-link">記事一覧</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="article-header">
+        <span class="tag">AI開発ツール</span>
+        <h1 class="article-title">
+          Amazon、Javaアプリ3万本のAI自動移行——Amazon Q Developerで作業4,500人年分を削減、日当〔1,000件操業
+        </h1>
+        <div class="article-meta">
+          <span class="article-company">Amazon Web Services（AWS）</span>
+          <span class="article-meta-sep">|</span>
+          <span>2025年4月</span>
+          <span class="article-meta-sep">|</span>
+          <span class="js-reading-time">読込中...</span>
+        </div>
+      </div>
+
+      <div class="article-container">
+        <p class="article-lead">
+          Amazonは2024年、社内で稼働する3万件以上のJavaアプリケーションをJava 17/21にアップグレードするマイグレーションプロジェクトに、自社開発のAIツール「Amazon Q Developer」を活用した。結果、これまでに要すると計算された4,500人年分の開発作業を削減し、ピーク時には1日当たり1,000件以上のアプリケーション移行を達成した。Amazon Q Developerの社内大規模導入は、コード移行・テスト自動化・IaC展開などの開発全工程でAIアシストが実用になることを示すランドマーク事例だ。
+        </p>
+
+        <div class="article-body">
+          <h2>背景：Javaレガシーコードの山と「人材が足りない」問題</h2>
+          <p>
+            Amazonは社内に数万件規模のJavaアプリケーションを保有しており、その多くがJava 8・Java 11上で動作していた。メンテナンス・サポート期限切れのリスク、セキュリティパッチ応用の遅れ、新機能開発の遅延といった課題を抱えていた。
+          </p>
+          <p>
+            Java 17/21にアップグレードすることで、これらのリスクを解消できる。しかし問題は規模だった。Javaアップグレードはバージョン間の非互換変更への対応や接続ライブラリの履歴読み込みなど、エンジニアが手動で行う必要があった。社内の3万件を数年かかる手動作業で移行するのは現実的ではなかった。
+          </p>
+
+          <h2>Amazon Q Developerによる自動化アプローチ</h2>
+          <p>
+            Amazon Q Developer（旧: Amazon CodeWhisperer）は、AWSが2023年に発表した開発者向けAIアシスタントだ。コード生成・テスト自動化・脆弱性スキャンなどの機能に加え、「アプリケーション変換」機能を併せ持つ。Amazonはこの変換機能をJavaメダに特化した形で社内展開した。
+          </p>
+          <p>
+            具体的なプロセスは以下の通りだ。
+          </p>
+          <ul>
+            <li>各Javaアプリの依存関係・API利用パターンをAmazon Qが分析</li>
+            <li>Java 17/21で廃止・変更されたAPIへの置換を自動特定</li>
+            <li>移行候補コードをAIが自動生成、ビルド・テストを連続実行して検証</li>
+            <li>エラーがあればAIが再修正・再テストし、成功したら次のアプリへ</li>
+          </ul>
+          <p>
+            ピーク時には1日当たり1,000件以上のアプリケーション移行を達成。プロジェクト全体での移行処理数は最終的に3万件超を完了した。
+          </p>
+
+          <div class="chart-section">
+            <p class="chart-section-title">Amazon Q Developer Java移行プロジェクトの実績</p>
+            <div class="bar-chart">
+              <div class="bar-chart-row">
+                <span class="bar-chart-label">移行完了件数</span>
+                <div class="bar-chart-track">
+                  <div class="bar-chart-fill" style="width:100%"></div>
+                </div>
+                <span class="bar-chart-value">3万件+</span>
+              </div>
+              <div class="bar-chart-row">
+                <span class="bar-chart-label">削減人年（相当）</span>
+                <div class="bar-chart-track">
+                  <div class="bar-chart-fill bar-chart-fill--green" style="width:90%"></div>
+                </div>
+                <span class="bar-chart-value">4,500人年</span>
+              </div>
+              <div class="bar-chart-row">
+                <span class="bar-chart-label">日次ピーク移行数</span>
+                <div class="bar-chart-track">
+                  <div class="bar-chart-fill bar-chart-fill--purple" style="width:100%"></div>
+                </div>
+                <span class="bar-chart-value">1,000件/日</span>
+              </div>
+            </div>
+            <p class="chart-note">出典: AWS DevOps Blog "How Amazon uses Amazon Q Developer to migrate Java code"（2024年10月）</p>
+          </div>
+
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-card-num">30,000件+</div>
+              <div class="stat-card-label">AIが移行した<br />Java本番環境アプリ数</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-num">4,500人年</div>
+              <div class="stat-card-label">削減された<br />人手作業相当量</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-num">1,000件/日</div>
+              <div class="stat-card-label">ピーク時の<br />日次移行件数</div>
+            </div>
+          </div>
+
+          <h2>Amazon Q Developerの主要機能・SaaSとの比較</h2>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>機能</th>
+                  <th>Amazon Q Developer</th>
+                  <th>GitHub Copilot</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>コード補完</td>
+                  <td class="td-good">✓ 対応</td>
+                  <td class="td-good">✓ 対応</td>
+                </tr>
+                <tr>
+                  <td>脆弱性スキャン</td>
+                  <td class="td-good">✓ 組み込み</td>
+                  <td class="td-warn">△ 別機能</td>
+                </tr>
+                <tr>
+                  <td>アプリ変換・アップグレード</td>
+                  <td class="td-good">✓ 対応</td>
+                  <td class="td-warn">— 非対応</td>
+                </tr>
+                <tr>
+                  <td>AWSサービスとの連携</td>
+                  <td class="td-good">✓ ネイティブ対応</td>
+                  <td class="td-warn">△ 限定的</td>
+                </tr>
+                <tr>
+                  <td>IaC（インフラコード）サポート</td>
+                  <td class="td-good">✓ 対応</td>
+                  <td class="td-good">✓ 対応</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-box">
+            <div class="key-box-title">エンジニアへのポイント</div>
+            <p>
+              Amazonの内部事例が示すのは、「AIによるコード変換」がコンセプトにとどまらず、本番級の大規模マイグレーション工事で実用になる段階に入ったということだ。レガシーコードの山を抱える中大規模開発組織にとって、Javaアップグレード以外にもテスト自動化・IaC化・ドキュメント整備などリソース消費の大きい工程でのAI活用を検討する価値がある。
+            </p>
+          </div>
+        </div>
+
+        <div class="article-references">
+          <h3>参考・出典</h3>
+          <ul class="ref-list">
+            <li>
+              AWS DevOps Blog「How Amazon uses Amazon Q Developer to migrate Java code」（2024年10月）<br />
+              <a
+                href="https://aws.amazon.com/blogs/devops/how-amazon-uses-amazon-q-developer-to-migrate-java-code/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://aws.amazon.com/blogs/devops/how-amazon-uses-amazon-q-developer-to-migrate-java-code/</a
+              >
+            </li>
+            <li>
+              Amazon Q Developer 公式サイト<br />
+              <a
+                href="https://aws.amazon.com/q/developer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://aws.amazon.com/q/developer/</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="article-nav">
+        <a href="../index.html" class="btn-back">← 記事一覧へ戻る</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-logo">AI活用事例</p>
+        <p class="footer-desc">
+          企業・団体における最新のAI活用事例を、具体的な数値とともに紹介します。
+        </p>
+        <p class="footer-copy">
+          掲載情報は各記事の公開日時点のものです。© 2026 AI活用事例
+        </p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
